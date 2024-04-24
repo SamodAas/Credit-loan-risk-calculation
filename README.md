@@ -24,7 +24,7 @@ It could further be adjusted by changing the parameters of the logistic regressi
 * There are also 5212 empty cells. When an observation doesn't have mortgage value then it is dropped, otherwise, other empty cells get median or mean values depending which is lower (in every case the difference is negligible).  
 * JOB column gets 6 dummy variables.  
 * Few of the extreme outliers are dropped.
-* All of the columns get scaled using *MinMaxScaler* to values ranging from 0 to 1
+* All of the columns get scaled using *MinMaxScaler* to values ranging from 0 to 1.
 * DEROG and DELINQ columns get maximum value for all observations having values above that particular value. As the complete majority of the values in these two features are less then 4 and 5 accordingly, any values above that get values 4 for DEROG and 5 for DELINQ. This is done to minimize the effect of those few outliers, especially considering that these features get scaled afterwards.
 * Similar to DEROG and DELINQ, DEBTINC gets value 100 if its original value is 100 and above.
 
@@ -34,4 +34,41 @@ Because the dataset does not contain many positive (defaulted) observations, res
 Further, forward and backward stepwise resgression model selection is used.
 
 ### Model evaluation
+
+Coefficients:  
+const          -1.2264     
+DELINQ          3.7080      
+DEROG           0.7345      
+NINQ            1.4585      
+CLAGE          -4.6598     
+DEBTINC         6.1082      
+JOB_Office     -0.5189      
+JOB_Sales       1.1965      
+YOJ            -0.4465      
+VALUE          -1.8367        
+JOB_ProfExe     0.0661       
+JOB_Self        0.5804  
+
+Odd ratios:  
+const            0.338274  
+DELINQ          43.616474  
+DEROG            2.170131  
+NINQ             4.069364  
+CLAGE            0.012491  
+DEBTINC        235.476192  
+JOB_Office       0.566841  
+JOB_Sales        2.731567  
+YOJ              0.646138  
+VALUE            0.200962  
+JOB_ProfExe      0.963847  
+JOB_Self         1.428451  
+
+Metrics:
+AUC_ROC score:  0.7244596920188633  
+Accuracy:  0.7628676470588235  
+Recall score:  0.6633663366336634  
+
+Confusion Matrix:   
+![image](https://github.com/SamodAas/Credit-loan-risk-calculation/assets/55328989/8ff52b40-2b63-473e-a8e3-6789109bdcb3)
+
 
