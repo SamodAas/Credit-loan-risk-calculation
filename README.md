@@ -20,6 +20,6 @@ It could further be adjusted by changing the parameters of the logistic regressi
 
 ### Data and its cleaning
 
-*There are 5442 observations and 16 features containing information about the credit history of the borrower as well as the information about the loan itself.  
-*There are also 5212 empty cells. When an observation doesn't have mortgage value then it is dropped, otherwise, other empty cells get median or mean values depending which is lower (in every case the difference is negligible).  
-*JOB column gets 6 dummy variables.  
+* There are 5442 observations and 16 features containing information about the credit history of the borrower as well as the information about the loan itself.  
+* There are also 5212 empty cells. When an observation doesn't have mortgage value then it is dropped, otherwise, other empty cells get median or mean values depending which is lower (in every case the difference is negligible).  
+* JOB column gets 6 dummy variables.  
