@@ -1,4 +1,4 @@
-This project calculates the capital requirement for given loans by a bank according to both the standard approach and F-IRB approach established by the Basel committee.
+This project calculates the capital requirement for given mortgage loans by a bank according to both the standard approach and F-IRB approach established by the Basel committee.
 
 [Link](https://docs.google.com/spreadsheets/d/1ab1TLiSjM7uA31HGqcP_-YkW5MMo4hCveACZfAOwfos/edit?usp=sharing)
 
@@ -16,4 +16,10 @@ As F-IRB is better at managing the risk which is brought by cyclic nature of eco
 It could further be adjusted by changing the parameters of the logistic regression
 
 
-### Logistic regression
+## Logistic regression
+
+### Data and its cleaning
+
+*There are 5442 observations and 16 features containing information about the credit history of the borrower as well as the information about the loan itself.  
+*There are also 5212 empty cells. When an observation doesn't have mortgage value then it is dropped, otherwise, other empty cells get median or mean values depending which is lower (in every case the difference is negligible).  
+*JOB column gets 6 dummy variables.  
